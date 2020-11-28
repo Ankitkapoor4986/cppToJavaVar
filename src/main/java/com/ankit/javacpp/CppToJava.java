@@ -16,11 +16,13 @@ public class CppToJava {
 
 
         char[] inputChars = input.toLowerCase().toCharArray();
-        for (Integer index : indexToCapitalize) {
+        indexToCapitalize.forEach(index->{
             char inputChar = inputChars[index];
             char upperCaseInputChar = Character.toUpperCase(inputChar);
             inputChars[index] = upperCaseInputChar;
-        }
+        });
+
+
         return String.valueOf(inputChars).replaceAll("_","");
     }
 }
